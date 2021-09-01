@@ -1,7 +1,6 @@
 package com.example.assignment3.service;
 
 import com.example.assignment3.model.Photo;
-import com.example.assignment3.model.User;
 import com.example.assignment3.repository.PhotoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

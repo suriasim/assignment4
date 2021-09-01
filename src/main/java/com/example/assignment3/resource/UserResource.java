@@ -1,11 +1,13 @@
 package com.example.assignment3.resource;
 
 
+import com.example.assignment3.exception.NameException;
 import com.example.assignment3.model.User;
 import com.example.assignment3.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -16,8 +18,16 @@ public class UserResource {
     private UserService userService;
 
     @PostMapping
-    public User saveUser(@RequestBody User user){
+    public User saveUser(@RequestBody @Valid User user) throws NameException {
+        if(user.getName().equalsIgnoreCase("root")){
+            throw new NameException();
+        }
         return userService.saveUser(user);
+    }
+
+    @ExceptionHandler(NameException.class)
+    public String nameError(NameException ex){
+        return ex.getMessage();
     }
 
     @GetMapping

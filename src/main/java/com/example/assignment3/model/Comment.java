@@ -1,5 +1,7 @@
 package com.example.assignment3.model;
 
+import com.example.assignment3.validation.ValidName;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.data.annotation.Id;
 
 public class Comment {
@@ -7,7 +9,9 @@ public class Comment {
     @Id
     private String id;
     private String photoId;
+    @Length(min = 5)
     private String message;
+    @ValidName
     private String createdBy;
     private String dateCreated;
 

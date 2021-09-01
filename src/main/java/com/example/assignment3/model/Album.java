@@ -1,13 +1,17 @@
 package com.example.assignment3.model;
 
+import com.example.assignment3.validation.ValidName;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.data.annotation.Id;
 
 public class Album {
 
     @Id
     private String id;
+    @Length(max = 10)
     private String name;
     private String coverPhotoUrl;
+    @ValidName
     private String createdBy;
     private String dateCreated;
 

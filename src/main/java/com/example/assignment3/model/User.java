@@ -2,12 +2,17 @@ package com.example.assignment3.model;
 
 import org.springframework.data.annotation.Id;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+
 public class User {
 
     @Id
     private String id;
     private String name;
+    @Email
     private String email;
+    @NotEmpty
     private String profilePhotoUrl;
 
     public User(String id, String name, String email, String profilePhotoUrl) {

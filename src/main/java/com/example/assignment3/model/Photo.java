@@ -1,5 +1,6 @@
 package com.example.assignment3.model;
 
+import com.example.assignment3.validation.ValidName;
 import org.springframework.data.annotation.Id;
 
 public class Photo {
@@ -8,6 +9,7 @@ public class Photo {
     private String id;
     private String albumId;
     private String photoUrl;
+    @ValidName
     private String createdBy;
     private String dateCreated;
 

@@ -6,11 +6,14 @@ com\example\assignment3\model\Album.class
 com\example\assignment3\model\Comment.class
 com\example\assignment3\resource\UserResource.class
 com\example\assignment3\resource\PhotoResource.class
+com\example\assignment3\validation\ValidNameValidator.class
 com\example\assignment3\Assignment3Application.class
 com\example\assignment3\model\Photo.class
+com\example\assignment3\validation\ValidName.class
 com\example\assignment3\ServletInitializer.class
 com\example\assignment3\service\CommentService.class
 com\example\assignment3\repository\CommentRepository.class
+com\example\assignment3\exception\NameException.class
 com\example\assignment3\repository\UserRepository.class
 com\example\assignment3\repository\PhotoRepository.class
 com\example\assignment3\resource\CommentResource.class
